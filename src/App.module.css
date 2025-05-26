@@ -5,3 +5,37 @@
   font-family: Arial, Helvetica, sans-serif;
 
 }
+
+
+.main{
+
+}
+
+.header{
+
+}
+
+
+.headerContainer{
+
+  max-width: 900px;
+  margin: 40px auto;
+
+}
+
+.container{
+  display: flex;
+  max-width: 900px;
+  margin: auto;
+  gap: 80px;
+}
+
+.container .leftSide{
+  flex: 1;
+
+}
+
+.container .rightSide{
+  flex: 1;
+    
+}
