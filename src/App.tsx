@@ -6,16 +6,17 @@ function App() {
 
   const [heightField, setHeightField] = useState<number>(0);
   const [weightField, setWeightField] = useState<number>(0);
- 
 
-  const handleCalculateButton = () => {
-    if(heightField && weightField ){
+
+  const handleCalculate = () => {
+    if(heightField && weightField){
 
     }else{
-      alert("Digite todos os campos");
+      alert("Digite todos os campos ... ")
     }
 
   }
+ 
 
   return (
     <div className={styles.main} >
@@ -29,26 +30,32 @@ function App() {
         <div className={styles.leftSide}>
           <h1>Calcule o seu IMC.</h1>
           <p>IMC é a sigla para Ìndice de Massa Corpórea, parâmetro adotado pela Organização Mundial de Saúde para calcular o peso ideal de cada pessoa.</p>
-          <input
-          type='number'
-          placeholder='Digite a sua altura. Ex: 1.5 (em métros)'
+
+          <input type="number"
+          placeholder='Digite aqui a sua altura. Ex: 1.80'
           value={heightField > 0 ? heightField : ""}
           onChange={e => setHeightField(parseFloat(e.target.value))}
-          />
-
-           <input
-          type='number'
-          placeholder='Digite o seu peso. Ex: 81.5 (em kg)'
+           />
+           
+           
+          <input type="number"
+          placeholder='Digite aqui seu  peso. Ex: 80'
           value={weightField > 0 ? weightField : ""}
-          onChange={e => setHeightField(parseFloat(e.target.value))}
-          />
+          onChange={e => setWeightField(parseFloat(e.target.value))}
+           />
 
-          <button onClick={handleCalculateButton}>Calcular</button>
+          <button onClick={handleCalculate}>Calcular</button>
         </div>
 
+       
 
+      
+
+{/*Area lado Direito do Site*/}
         <div className={styles.rightSide}>
-                  </div>
+
+        </div>
+        
       </div>
     </div>
   

@@ -7,17 +7,7 @@
 }
 
 
-.main{
-
-}
-
-.header{
-
-}
-
-
 .headerContainer{
-
   max-width: 900px;
   margin: 40px auto;
 
@@ -34,6 +24,31 @@
   flex: 1;
 
 }
+
+.container .leftSide h1 {
+  margin: 0 ;
+  font-size: 40px;
+
+}
+
+.container .leftSide p {
+
+}
+
+
+.container .leftSide input{
+
+}
+
+.container .leftSide button{
+
+}
+
+
+
+
+
+
 
 .container .rightSide{
   flex: 1;
