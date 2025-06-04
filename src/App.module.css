@@ -22,16 +22,19 @@
 
 .container .leftSide{
   flex: 1;
-
 }
 
 .container .leftSide h1 {
   margin: 0 ;
   font-size: 40px;
+  color: #3A4B5C;
 
 }
 
 .container .leftSide p {
+  font-size: 16px;
+  margin-bottom: 40px;
+  color: #6A7D8B
 
 }
 
