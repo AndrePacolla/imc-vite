@@ -32,19 +32,38 @@
 }
 
 .container .leftSide p {
-  font-size: 16px;
+  font-size: 20px;
   margin-bottom: 40px;
-  color: #6A7D8B
+  color:rgb(100, 106, 111)
 
 }
 
 
 .container .leftSide input{
-
+  width:100%;
+  border: 0;
+  padding: 4px;
+  margin-bottom: 20px;
+  font-size: 17px;
+  border-bottom: 2px solid rgba(140, 146, 150, 0.69);
+  outline: none;
 }
 
 .container .leftSide button{
+  background-color: #227C9D;
+  color:#FFF;
+  font-size: 15px;
+  border: 0;
+  border-radius: 10px;
+  padding: 10px 3px;
+  width:100%;
+  margin-top:40px; 
+  cursor: pointer;
+  font-size: 17px;
+}
 
+.container .leftSide button:hover {
+    opacity: .9
 }
 
 
@@ -55,5 +74,5 @@
 
 .container .rightSide{
   flex: 1;
-    
+  margin-left: 40px;    
 }
