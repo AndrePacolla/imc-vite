@@ -60,15 +60,13 @@
   margin-top:40px; 
   cursor: pointer;
   font-size: 17px;
+  transition: all ease .3s;
 }
 
 .container .leftSide button:hover {
-    opacity: .9
+    opacity: .8;
+    color: black;
 }
-
-
-
-
 
 
 
