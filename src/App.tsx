@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import styles from './App.module.css';
 import poweredImage from "./assets/powered.png";
+import { levels } from './helpers/imc';
 
 function App() {
 
@@ -53,6 +54,14 @@ function App() {
 
 {/*Area lado Direito do Site*/}
         <div className={styles.rightSide}>
+
+          <div className={styles.grid}>
+              {levels.map((item, key) => (
+                   <div key={key}> {item.title}</div>
+              ))}
+
+
+          </div>
 
         </div>
         
