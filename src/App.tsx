@@ -57,7 +57,7 @@ function App() {
 
           <div className={styles.grid}>
               {levels.map((item, key) => (
-                   <div key={key}> {item.title}</div>
+                   <div className={styles.gridItem} key={key}> {item.title}</div>
               ))}
 
 
