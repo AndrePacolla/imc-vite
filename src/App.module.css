@@ -68,8 +68,6 @@
     color: black;
 }
 
-
-
 .container .rightSide{
   flex: 1;
   margin-left: 40px;  
@@ -82,12 +80,10 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
-
 }
 
-
 .container .rightSide .grid .gridItem{
-  border: 15px solid;
+  border: 2px solid;
   text-align: center;
   padding: 15px;
 }
