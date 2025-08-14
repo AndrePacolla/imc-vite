@@ -4,7 +4,7 @@ import upImage from "../../assets/up.png";
 import downImage from "../../assets/down.png";
 
 type Props ={
-    item: Level
+    item: Level 
 }
 
 
@@ -20,17 +20,17 @@ export const GridItem = ({item}: Props) => {
             {item.myImc &&
 
             <div className={styles.myImc}>
-                Seu IMC é de <strong>{parseFloat(item.myImc.toFixed(2))}</strong>// precisei usar metodo parseFloat pq o tofixed retorna uma string.
+                <strong> Seu IMC é de {item.myImc} </strong> 
             </div>
             
             
             
             }
             <div className={styles.gridInfo}>
-                <>
                 
-                 IMC está entre <strong>{item.imc[0]}</strong> e <strong>{item.imc[1]}</strong>
-                </>
+                
+                 <strong> IMC está entre{item.imc[0]}</strong> e <strong>{item.imc[1]}</strong>
+               
             
 
             </div>

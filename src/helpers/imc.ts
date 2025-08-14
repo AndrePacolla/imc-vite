@@ -19,11 +19,14 @@ export const calculateImc = (height: number, weight: number) => {
 
     for (let i in levels ){
         if(imc >= levels[i].imc[0] && imc < levels[i].imc[1]){ 
-            levels[i].myImc = imc;
-            return levels[i];
+
+            const levelsCopy = {...levels[i]};
+            levelsCopy.myImc = parseFloat(imc.toFixed(2)); // toFixed(2) para limitar a 2 casas decimais,porem retorna string, por isso uso parseFloat;
+            return levelsCopy;
         }
     }
     return null;
 };
 
 
+        
