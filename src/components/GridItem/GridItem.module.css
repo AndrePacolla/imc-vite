@@ -1,13 +1,19 @@
 .main{
-    flex:1;
-    color: #FFF;
-    border-radius: 10px;
     display: flex;
+    flex-direction: column;
+    flex:1;
+    color: #000;
+    border-radius: 10px;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    padding: 20px
+    padding: 20px;
+    transition: all ease .3s;
+    font-bold: 600;
 }
+
+.main:hover{
+    transform: scale(1.15);
+};   
 
 .gridIcon{
     width: 70px;
@@ -27,5 +33,9 @@
 
 .gridInfo{
        font-size: 17px;
+}
 
+.myImc{
+    font-size: 17px;
+    margin: 10px 0 50px 0;
 }

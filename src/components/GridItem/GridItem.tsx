@@ -13,9 +13,19 @@ export const GridItem = ({item}: Props) => {
         <div className={styles.main} style={{backgroundColor: item.color}}>
 
            <div className={styles.gridIcon}>
-            <img src={item.icon === "up" ? upImage : downImage} alt="" width={30}/>  
+            <img src={item.icon === "up" ? upImage : downImage} alt="emoticon" width={30}/>  
            </div>
             <div className={styles.gridTitle}>{item.title}</div>
+
+            {item.myImc &&
+
+            <div className={styles.myImc}>
+                Seu IMC é de <strong>{parseFloat(item.myImc.toFixed(2))}</strong>// precisei usar metodo parseFloat pq o tofixed retorna uma string.
+            </div>
+            
+            
+            
+            }
             <div className={styles.gridInfo}>
                 <>
                 

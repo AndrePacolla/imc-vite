@@ -82,3 +82,10 @@
   gap: 20px;
 }
 
+
+.container .rightSide .rightBig{
+  flex: 1;
+  display: flex;
+  
+
+}

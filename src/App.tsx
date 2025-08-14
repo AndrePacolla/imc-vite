@@ -1,17 +1,20 @@
 import { useState } from 'react';
 import styles from './App.module.css';
 import poweredImage from "./assets/powered.png";
-import { levels } from './helpers/imc';
-import { GridItem } from "./components/GridItem/GridItem";
+import { Level, levels, calculateImc } from './helpers/imc';
+import { GridItem} from "./components/GridItem/GridItem";
 
 function App() {
 
   const [heightField, setHeightField] = useState<number>(0);
   const [weightField, setWeightField] = useState<number>(0);
+  const [toShow, setToShow] = useState<Level| null>(null);
 
 
   const handleCalculate = () => {
     if(heightField && weightField){
+      setToShow(calculateImc(heightField, weightField))
+
 
     }else{
       alert("Digite todos os campos ... ")
@@ -35,9 +38,11 @@ function App() {
 
           <input type="number"
           placeholder='Digite aqui a sua altura. Ex: 1.80'
-          value={heightField > 0 ? heightField : ""}
-          onChange={e => setHeightField(parseFloat(e.target.value))}
+          value={heightField > 0 ? heightField : ""} // validação ,pois state inicia em zero, n quero 0 no input
+          onChange={e => setHeightField(parseFloat(e.target.value))}// value sempre é uma string, por esse motivo preciso transformar em numero decimal
+         
            />
+
            
            
           <input type="number"
@@ -55,14 +60,23 @@ function App() {
 
 {/*Area lado Direito do Site*/}
         <div className={styles.rightSide}>
+          {!toShow && 
 
-          <div className={styles.grid}>
+           <div className={styles.grid}>
               {levels.map((item, key) => (
                    <GridItem key={key} item={item}/>
               ))}
+           </div>   
+        
+          }
 
+          {toShow &&
 
+          <div className={styles.rightBig}>
+            <div className = {styles.rightArrow}></div>
+            <GridItem item={toShow}/>
           </div>
+          }
 
         </div>
         
