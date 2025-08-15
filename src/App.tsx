@@ -15,8 +15,6 @@ function App() {
   const handleCalculate = () => {
     if(heightField && weightField){
       setToShow(calculateImc(heightField, weightField))
-
-
     }else{
       alert("Digite todos os campos ... ")
     }
@@ -45,7 +43,7 @@ function App() {
           placeholder='Digite aqui a sua altura. Ex: 1.80'
           value={heightField > 0 ? heightField : ""} // validação ,pois state inicia em zero, n quero 0 no input
           onChange={e => setHeightField(parseFloat(e.target.value))}// value sempre é uma string, por esse motivo preciso transformar em numero decimal
-         
+          disabled={toShow ? true : false} // se toShow tiver algo, o input fica desabilitado
            />
 
            
@@ -54,9 +52,10 @@ function App() {
           placeholder='Digite aqui seu  peso. Ex: 80'
           value={weightField > 0 ? weightField : ""}
           onChange={e => setWeightField(parseFloat(e.target.value))}
+            disabled={toShow ? true : false}
            />
 
-          <button onClick={handleCalculate}>Calcular</button>
+          <button   disabled={toShow ? true : false} onClick={handleCalculate}>Calcular</button>
         </div>
 
        

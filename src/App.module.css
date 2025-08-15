@@ -102,3 +102,7 @@
   margin-left: -35px; 
   margin-top: 150px;
 }
+
+.container .rightSide .rightArrow:hover{
+  background-color: #1A5B6F;
+}
