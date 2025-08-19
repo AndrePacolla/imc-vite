@@ -1,9 +1,11 @@
 * {box-sizing: border-box;}
 
-
 .body{
-  font-family: sans-serif;
+   font-family: "Source Code Pro";
 
+}
+.main{
+  padding-bottom: 20px
 }
 
 
@@ -91,6 +93,8 @@
 
 .container .rightSide .rightArrow{
   position: absolute;
+  margin-top: 150px;
+  margin-left: -35px; 
   background-color: #227C9D;
   width: 70px;
   height: 70px;
@@ -99,10 +103,74 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  margin-left: -35px; 
-  margin-top: 150px;
 }
 
 .container .rightSide .rightArrow:hover{
   background-color: #1A5B6F;
+}
+
+@media (max-width: 770px){ /*Tablet*/
+
+  header{
+    padding: 0 20px;
+  }
+  .container{
+    flex-direction: column;
+    padding: 0 20px;
+    gap: 30px;
+  }
+
+   .container .leftSide{
+    margin-right: 0;
+  }
+
+  .container .rightSide{
+    margin-left: 0;
+  }
+
+  .container .leftSide h1 {
+    font-size: 35px;
+    text-align: center;
+  }
+  .container .leftSide p {
+    font-size: 16px;
+    text-align: center;
+  }
+  .container .rightSide .rightArrow{
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    margin-left: 0px; 
+    margin-top: 0px;
+
+  }
+  .container .rightSide .rightArrow:hover{
+    width: 45px;
+    height: 45px;
+  }
+
+  .container .rightSide .rightArrow img{
+    width: 20px;
+  }
+}
+
+@media (max-width: 430px){ /*Mobile*/
+
+  .container .rightSide .grid{
+    grid-template-columns: 1fr;
+  }
+
+  .container .rightSide .rightArrow{
+    width: 35px;
+    height: 35px;
+    border-radius: 5px;
+    margin-left: 0px; 
+    margin-top: 0px;
+  }
+
+  .container .rightSide .rightArrow:hover{
+    width: 40px;
+    height: 40px;
+  }
+
 }

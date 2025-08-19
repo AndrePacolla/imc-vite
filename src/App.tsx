@@ -52,7 +52,7 @@ function App() {
           placeholder='Digite aqui seu  peso. Ex: 80'
           value={weightField > 0 ? weightField : ""}
           onChange={e => setWeightField(parseFloat(e.target.value))}
-            disabled={toShow ? true : false}
+          disabled={toShow ? true : false}
            />
 
           <button   disabled={toShow ? true : false} onClick={handleCalculate}>Calcular</button>
